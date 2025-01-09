@@ -1,0 +1,19 @@
+server:
+ port: 8090
+
+ 
+ # database 연동 설정
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/spring_boot_study?characterEncoding=UTF-8&serverTimezone=UTC
+    username: hairmetal
+    password: 1234
+  thymeleaf:
+    cache: false
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update       
